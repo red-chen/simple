@@ -2,6 +2,8 @@
 
 file_list=`find bin -name "*_unittest"`
 
+echo "$file_list"
+
 IFS=$'\n'
 for file_path in $file_list
 do 
