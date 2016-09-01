@@ -1,0 +1,19 @@
+# -*- mode: python -*-
+# -*- coding: utf-8 -*-
+
+Import('env')
+
+env.Append(CPPPATH='#/include/lemon/')
+
+obj = []
+obj += Glob('*.c')
+obj += Glob('file/*.c')
+obj += Glob('collection/*.c')
+obj += Glob('logging/*.c')
+obj += Glob('io/*.c')
+obj += Glob('cjson/*.c')
+
+env.aStaticLibrary("lemon_static", obj) 
+env.aSharedLibrary("lemon_shared", obj) 
+
+env.aSubs('unittest')

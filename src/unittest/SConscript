@@ -1,0 +1,27 @@
+# -*- mode: python -*-
+# -*- coding: utf-8 -*-
+
+Import('env')
+
+env = env.Clone()
+
+env.Append(LIBPATH=['#/lib/'])
+
+lib = [
+    'lemon_static'
+]
+
+env.aProgram(
+    "timestamp_unittest", 
+    ['timestamp_unittest.c'], 
+    LIBS=lib)
+
+env.aProgram(
+    "memory_pool_unittest", 
+    ['memory_pool_unittest.c'], 
+    LIBS=lib)
+
+env.aProgram(
+    "cjson_unittest", 
+    ['cjson_unittest.c'], 
+    LIBS=['lemon_static', 'm'])
