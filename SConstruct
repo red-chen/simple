@@ -85,4 +85,4 @@ env.Append(CPPPATH=[])
 
 env.aSubs('src')
 #env.aSubs('deps')
-#env.aSubs('sample')
+env.aSubs('sample')

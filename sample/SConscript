@@ -1,0 +1,12 @@
+# -*- mode: python -*-
+# -*- coding: utf-8 -*-
+
+Import('env')
+
+env = env.Clone()
+
+env.Append(CPPPATH=['#/include/'])
+env.Append(LIBPATH=['#/lib/'])
+
+env.aSubs('logging')
+env.aSubs('io')
