@@ -4,4 +4,4 @@ compiler:
 - gcc
 
 # Change this to your needs
-script:  scons
+script:  scons && sh test.sh
