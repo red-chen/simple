@@ -38,4 +38,11 @@ void simple_now_iso8601(/*out*/char out[])
     simple_timestamp_to_iso8601(simple_real_time_now(), out);
 }
 
+TIME_IN_MICRO simple_parse_iso8601(const char* str_utc_time) 
+{
+    // len (1970-01-01T08:00:00.000000+08) == 29
+    int len = strlen(str_utc_time);
+    ASSERT(len == 29, "input str time len(%d) != 29, input: %s", strlen(str_utc_time), str_utc_time);
+    return 0;
+}
 

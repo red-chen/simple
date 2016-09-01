@@ -26,3 +26,8 @@ env.aProgram(
     "cjson_unittest", 
     ['cjson_unittest.c'], 
     LIBS=['lemon_static', 'm'])
+
+#env.aProgram(
+#    "array_list_unittest", 
+#    ['array_list_unittest.c'], 
+#    LIBS=['lemon_static', 'm'])
