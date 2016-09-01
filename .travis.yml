@@ -1,15 +1,15 @@
----
 language: c
 
 addons:
-  apt:
-    sources:
-    - ubuntu-toolchain-r-test
-    packages:
-    - gcc-4.8
+ apt:
+   sources:
+   - ubuntu-toolchain-r-test
+   packages:
+   - gcc-4.8
+   - g++-4.8
 
 compiler: 
-- gcc
+- gcc-4.8
 
 # Change this to your needs
 script:  scons
