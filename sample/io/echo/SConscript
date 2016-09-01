@@ -1,0 +1,9 @@
+# -*- mode: python -*-
+# -*- coding: utf-8 -*-
+
+Import('env')
+
+env = env.Clone()
+
+env.aProgram('io_client', ['client.c'], LIBS=['lemon_static', 'pthread'])
+env.aProgram('io_server', ['server.c'], LIBS=['lemon_static', 'pthread'])

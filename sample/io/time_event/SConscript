@@ -1,0 +1,8 @@
+# -*- mode: python -*-
+# -*- coding: utf-8 -*-
+
+Import('env')
+
+env = env.Clone()
+
+env.aProgram('io_time_event_test', ['time_event_test.c'], LIBS=['lemon_static', 'pthread'])
