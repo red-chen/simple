@@ -20,6 +20,7 @@ https://github.com/red-chen/simple_scons
 > git clone https://github.com/red-chen/lemon.git --recursive
 > cd lemon
 > scons
+> sh test.sh
 ```
 
 ###
