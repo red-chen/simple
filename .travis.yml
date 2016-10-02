@@ -3,5 +3,13 @@ language: c
 compiler: 
 - gcc
 
+addons:
+  apt:
+    sources:
+    - ubuntu-toolchain-r-test
+    packages:
+    - valgrind
+
+
 # Change this to your needs
 script:  scons && sh test.sh

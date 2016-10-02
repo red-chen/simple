@@ -6,7 +6,7 @@ flag=0
 
 for file_path in $file_list
 do 
-    $file_path
+    valgrind --error-exitcode=42 --leak-check=full $file_path
     [ $? != 0 ] && flag=1
 done
 
