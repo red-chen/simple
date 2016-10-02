@@ -23,6 +23,11 @@ https://github.com/red-chen/simple_scons
 > sh test.sh
 ```
 
+# 功能集合
+- 时间转换
+- 日志
+- Json
+
 ###
 
 ###
