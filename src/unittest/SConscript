@@ -17,15 +17,15 @@ env.aProgram(
     ['timestamp_unittest.c'], 
     LIBS=lib)
 
-env.aProgram(
-    "memory_pool_unittest", 
-    ['memory_pool_unittest.c'], 
-    LIBS=lib)
-
-env.aProgram(
-    "cjson_unittest", 
-    ['cjson_unittest.c'], 
-    LIBS=['lemon_static', 'm'])
+#env.aProgram(
+#    "memory_pool_unittest", 
+#    ['memory_pool_unittest.c'], 
+#    LIBS=lib)
+#
+#env.aProgram(
+#    "cjson_unittest", 
+#    ['cjson_unittest.c'], 
+#    LIBS=['lemon_static', 'm'])
 
 #env.aProgram(
 #    "array_list_unittest", 

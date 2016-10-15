@@ -163,8 +163,26 @@ void simple_unittest_free()
 {
     int total_time = testInst->cur_time - testInst->start_time;
     int pass = testInst->total_case - testInst->fail_case;
+
+    Suite* index_suite = testInst->suites;
+    while (index_suite != NULL) {
+        Suite* tmp_suite = index_suite;
+
+        TestCase* ts_index = tmp_suite->cases;
+        while (ts_index != NULL) {
+            TestCase* tmp_ts = ts_index;
+            ts_index = ts_index->next;
+            free(tmp_ts);
+        }
+
+        index_suite = index_suite->next;
+        free(tmp_suite);
+    }
+
     printf(" Total case passed : %d/%d\n", pass, testInst->total_case);
     printf(" Total time spend  : %d micro-seconds\n\n", total_time);
+
+    free(testInst);
 }
 
 void simple_unittest_set_flag(int flag)
