@@ -1,0 +1,13 @@
+# process monitor
+# cmd: sudo stap -vp 5 process_status.stp -x {pid}
+# deps: kernel-debuginfo
+
+probe begin {
+    printf("Start.");
+}
+probe signal.send {
+    if (sig_name == "SIGTERM" && sig_pid == target()) {
+        printf("%s was sent to %s (pidL%d) by %s uid:%d, pid:%d\n", sig_name, pid_name, sig_pid, execname(), uid(), pid());
+        system("ps auxf > ps.log");
+    }
+}
