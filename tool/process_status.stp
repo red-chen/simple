@@ -1,4 +1,4 @@
-# process monitor
+# systemtap process monitor
 # cmd: sudo stap -vp 5 process_status.stp -x {pid}
 # deps: kernel-debuginfo
 
