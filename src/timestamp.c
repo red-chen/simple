@@ -9,14 +9,20 @@
 TIME_IN_MICRO simple_monotonic_time_now()
 {
     struct timespec now;
-    ASSERT((clock_gettime(CLOCK_MONOTONIC, &now) == 0), "clock_gettime run fail ! errno:%d, error message:%s", errno, strerror(errno));
+    ASSERT(
+            (clock_gettime(CLOCK_MONOTONIC, &now) == 0), 
+            "clock_gettime run fail ! errno:%d, error message:%s", errno, strerror(errno)
+    );
     return now.tv_sec * MICRO_PER_SEC + now.tv_nsec / NANO_PER_MICRO;
 }
 
 TIME_IN_MICRO simple_real_time_now()
 {
     struct timeval now;
-    ASSERT((gettimeofday(&now, NULL) == 0), "gettimeofday run fail ! errno:%d, error message:%s", errno, strerror(errno));
+    ASSERT(
+            (gettimeofday(&now, NULL) == 0), 
+            "gettimeofday run fail ! errno:%d, error message:%s", errno, strerror(errno)
+    );
     return now.tv_sec * MICRO_PER_SEC + now.tv_usec;
 }
 
@@ -42,7 +48,10 @@ TIME_IN_MICRO simple_parse_iso8601(const char* str_utc_time)
 {
     // len (1970-01-01T08:00:00.000000+08) == 29
     int len = strlen(str_utc_time);
-    ASSERT(len == 29, "input str time len(%d) != 29, input: %s", strlen(str_utc_time), str_utc_time);
+    ASSERT(
+            (len == 29), 
+            "input str time len(%d) != 29, input: %s", strlen(str_utc_time), str_utc_time
+    );
     return 0;
 }
 

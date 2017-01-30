@@ -24,6 +24,7 @@
 ## version 0.3
 - 提供Md5
 - 提供原子锁
+- 提供Counter工具
 
 ## version 0.2
 - 完善Timestamp库，提供字符串到数字，数字到字符串的转换
