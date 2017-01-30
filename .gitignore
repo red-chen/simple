@@ -13,6 +13,7 @@
 *.a
 *.la
 *.lo
+*.os
 
 # Shared objects (inc. Windows DLLs)
 *.dll
@@ -31,3 +32,6 @@
 # Debug files
 *.dSYM/
 *.su
+
+# Other
+.scons*
