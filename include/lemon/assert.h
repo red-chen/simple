@@ -12,6 +12,15 @@
 
 void va_list_print(char log_message[], char* format, ...);
 
+#define DEBUG_STRING(input)\
+    fprintf(stdout, "DEBUG_STRING: %s\n", (input));
+
+#define DEBUG_INT(input)\
+    fprintf(stdout, "DEBUG_INT: %d\n", (input));
+
+#define DEBUG_LONG(input)\
+    fprintf(stdout, "DEBUG_LONG: %ld\n", (input));
+
 #define ASSERT_NOT_NULL(flag) \
         if(!((flag) != NULL)){\
             char __log_time__[64] = { 0 };\

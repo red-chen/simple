@@ -124,11 +124,11 @@ void simple_unittest_set_error(char* msg);
 }
 
 #define TEST_EQUAL_INT(expect,target) { \
-    int unitttest_target_int = target; \
-    int unitttest_expect_int = expect; \
+    int64_t unitttest_target_int = target; \
+    int64_t unitttest_expect_int = expect; \
     if (unitttest_expect_int != unitttest_target_int) {\
         char lemon_test_equal_string_buf[256] = {0};\
-        sprintf(lemon_test_equal_string_buf, "Not equal,  expect = %d, target = %d [%d,%s]", unitttest_expect_int, unitttest_target_int, __LINE__, __FUNCTION__);\
+        sprintf(lemon_test_equal_string_buf, "Not equal,  expect = %ld, target = %ld [%d,%s]", unitttest_expect_int, unitttest_target_int, __LINE__, __FUNCTION__);\
         simple_unittest_set_flag(0);\
         simple_unittest_set_error(lemon_test_equal_string_buf);\
         return;\
