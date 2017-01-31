@@ -180,3 +180,13 @@ void simple_pool_reset(SimplePool* self) {
     self->current = self;
     self->large = NULL; 
 }
+
+void simple_pool_status(SimplePool* self) {
+    puts("===============  Memory Pool Status ================");
+    printf("Max:          %ld\n", self->max);
+    printf("Failed:       %d\n", self->header.failed);
+    printf("Currend addr: %p\n", self->current);
+    printf("Last addr:    %p\n", self->header.last);
+    printf("End addr:     %p\n", self->header.end);
+    puts("====================================================");
+}

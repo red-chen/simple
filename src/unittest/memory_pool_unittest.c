@@ -20,6 +20,7 @@ void test_simple_memory_pool_base()
     void* data = simple_pool_malloc(pool, 200);
     strcpy(data, "hello world");
     printf("%s\n", (char*)data);
+    simple_pool_status(pool);
     simple_pool_destory(pool);
 }
 
