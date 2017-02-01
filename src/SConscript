@@ -3,7 +3,7 @@
 
 Import('env')
 
-env.Append(CPPPATH='#/include/lemon/')
+env.Append(CPPPATH='#/include/simple/')
 
 obj = []
 obj += Glob('*.c')
@@ -13,7 +13,7 @@ obj += Glob('logging/*.c')
 obj += Glob('io/*.c')
 obj += Glob('cjson/*.c')
 
-env.aStaticLibrary("lemon_static", obj) 
-env.aSharedLibrary("lemon_shared", obj) 
+env.aStaticLibrary("simple_static", obj) 
+env.aSharedLibrary("simple_shared", obj) 
 
 env.aSubs('unittest')

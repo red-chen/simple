@@ -105,20 +105,20 @@ void simple_unittest_set_error(char* msg);
 
 #define TEST_TRUE(value) { \
     if (!value) {\
-        char lemon_test_equal_string_buf[256] = {0};\
-        sprintf(lemon_test_equal_string_buf, "expect True but False [%d,%s]",__LINE__, __FUNCTION__);\
+        char simple_test_equal_string_buf[256] = {0};\
+        sprintf(simple_test_equal_string_buf, "expect True but False [%d,%s]",__LINE__, __FUNCTION__);\
         simple_unittest_set_flag(0);\
-        simple_unittest_set_error(lemon_test_equal_string_buf);\
+        simple_unittest_set_error(simple_test_equal_string_buf);\
         return;\
     } \
 }
 
 #define TEST_FALSE(value) { \
     if (value) {\
-            char lemon_test_equal_string_buf[256] = {0};\
-            sprintf(lemon_test_equal_string_buf, "expect False but True [%d,%s]",__LINE__, __FUNCTION__);\
+            char simple_test_equal_string_buf[256] = {0};\
+            sprintf(simple_test_equal_string_buf, "expect False but True [%d,%s]",__LINE__, __FUNCTION__);\
             simple_unittest_set_flag(0);\
-            simple_unittest_set_error(lemon_test_equal_string_buf);\
+            simple_unittest_set_error(simple_test_equal_string_buf);\
             return;\
     } \
 }
@@ -127,10 +127,10 @@ void simple_unittest_set_error(char* msg);
     int64_t unitttest_target_int = target; \
     int64_t unitttest_expect_int = expect; \
     if (unitttest_expect_int != unitttest_target_int) {\
-        char lemon_test_equal_string_buf[256] = {0};\
-        sprintf(lemon_test_equal_string_buf, "Not equal,  expect = %ld, target = %ld [%d,%s]", unitttest_expect_int, unitttest_target_int, __LINE__, __FUNCTION__);\
+        char simple_test_equal_string_buf[256] = {0};\
+        sprintf(simple_test_equal_string_buf, "Not equal,  expect = %ld, target = %ld [%d,%s]", unitttest_expect_int, unitttest_target_int, __LINE__, __FUNCTION__);\
         simple_unittest_set_flag(0);\
-        simple_unittest_set_error(lemon_test_equal_string_buf);\
+        simple_unittest_set_error(simple_test_equal_string_buf);\
         return;\
     } \
 }
@@ -139,10 +139,10 @@ void simple_unittest_set_error(char* msg);
     double unitttest_target_double = target; \
     double unitttest_expect_double = expect; \
     if (unitttest_expect_double != (unitttest_target_double)) {\
-        char lemon_test_equal_string_buf[256] = {0};\
-        sprintf(lemon_test_equal_string_buf, "Not equal,  expect = %f, target = %f [%d,%s]", unitttest_expect_double, unitttest_target_double, __LINE__, __FUNCTION__);\
+        char simple_test_equal_string_buf[256] = {0};\
+        sprintf(simple_test_equal_string_buf, "Not equal,  expect = %f, target = %f [%d,%s]", unitttest_expect_double, unitttest_target_double, __LINE__, __FUNCTION__);\
         simple_unittest_set_flag(0);\
-        simple_unittest_set_error(lemon_test_equal_string_buf);\
+        simple_unittest_set_error(simple_test_equal_string_buf);\
         return;\
     } \
 }
@@ -151,23 +151,23 @@ void simple_unittest_set_error(char* msg);
     const char* unitttest_target_void = target; \
     if ((void*)expect == NULL || (void*)unitttest_target_void == NULL){\
         if((void*)expect != (void*)target){\
-            char lemon_test_equal_string_buf[256] = {0};\
+            char simple_test_equal_string_buf[256] = {0};\
             if((void*)expect != NULL){\
-                sprintf(lemon_test_equal_string_buf, "Not equal,  expect = %s, target = NULL [%d,%s]", expect, __LINE__, __FUNCTION__);\
+                sprintf(simple_test_equal_string_buf, "Not equal,  expect = %s, target = NULL [%d,%s]", expect, __LINE__, __FUNCTION__);\
                 simple_unittest_set_flag(0);\
-                simple_unittest_set_error(lemon_test_equal_string_buf);\
+                simple_unittest_set_error(simple_test_equal_string_buf);\
             }else{\
-                sprintf(lemon_test_equal_string_buf, "Not equal,  expect = NULL, target = %s [%d,%s]", unitttest_target_void, __LINE__, __FUNCTION__);\
+                sprintf(simple_test_equal_string_buf, "Not equal,  expect = NULL, target = %s [%d,%s]", unitttest_target_void, __LINE__, __FUNCTION__);\
                 simple_unittest_set_flag(0);\
-                simple_unittest_set_error(lemon_test_equal_string_buf);\
+                simple_unittest_set_error(simple_test_equal_string_buf);\
             }\
             return;\
         }\
     }else if (strcmp((expect),(target)) != 0) {\
-        char lemon_test_equal_string_buf[256] = {0};\
-        sprintf(lemon_test_equal_string_buf, "Not equal,  expect = %s, target = %s [%d,%s]", expect, unitttest_target_void, __LINE__, __FUNCTION__);\
+        char simple_test_equal_string_buf[256] = {0};\
+        sprintf(simple_test_equal_string_buf, "Not equal,  expect = %s, target = %s [%d,%s]", expect, unitttest_target_void, __LINE__, __FUNCTION__);\
         simple_unittest_set_flag(0);\
-        simple_unittest_set_error(lemon_test_equal_string_buf);\
+        simple_unittest_set_error(simple_test_equal_string_buf);\
         return;\
     } \
 }

@@ -1,5 +1,5 @@
-#include <lemon/io_thread.h>
-#include <lemon/timestamp.h>
+#include <simple/io_thread.h>
+#include <simple/timestamp.h>
 
 #include <stdbool.h>
 #include <signal.h>

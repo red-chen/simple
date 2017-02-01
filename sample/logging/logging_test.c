@@ -1,4 +1,4 @@
-#include "lemon/logging.h"
+#include "simple/logging.h"
 
 #include <stdlib.h>
 #include <stdio.h>
