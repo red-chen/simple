@@ -1,5 +1,5 @@
-#ifndef LEMON_TIMESTAMP_H_
-#define LEMON_TIMESTAMP_H_
+#ifndef SIMPLE_TIMESTAMP_H_
+#define SIMPLE_TIMESTAMP_H_
 
 #include <stdint.h>
 

@@ -4,14 +4,14 @@
  * 设计和思想来自于Nginx，主要区别是simple pool当前只是管理内存
  *
  */
-#ifndef LEMON_MEMORY_POOL_H
-#define LEMON_MEMORY_POOL_H
+#ifndef SIMPLE_MEMORY_POOL_H
+#define SIMPLE_MEMORY_POOL_H
 
 #include <stdint.h>
 #include <stdio.h>
 #include <stdlib.h>
 
-#define LEMON_ALIGN_PTR(p, a) \
+#define SIMPLE_ALIGN_PTR(p, a) \
         (unsigned char *) (((uint64_t ) (p) + ((uint64_t ) a - 1)) & ~((uint64_t ) a - 1))
 
 typedef struct SimplePool SimplePool;

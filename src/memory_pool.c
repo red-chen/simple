@@ -94,7 +94,7 @@ static void* simple_pool_alloc_block(SimplePool* self, size_t size) {
     new->header.failed = 0;
 
     m += sizeof(SimplePoolHeader);
-    m = LEMON_ALIGN_PTR(m, SIMPLE_POOL_ALINMENT);
+    m = SIMPLE_ALIGN_PTR(m, SIMPLE_POOL_ALINMENT);
     new->header.last = m + size;
 
     for (p = self->current; p->header.next; p = p->header.next) {
@@ -148,7 +148,7 @@ void* simple_pool_malloc(SimplePool* self, size_t size) {
     if (size < self->max) {
         SimplePool* p = self->current;
         do {
-            void* mem = LEMON_ALIGN_PTR(p->header.last, SIMPLE_POOL_ALINMENT);
+            void* mem = SIMPLE_ALIGN_PTR(p->header.last, SIMPLE_POOL_ALINMENT);
             if ((size_t) (p->header.end - mem) >= size) {
                 p->header.last = mem + size;
                 return mem;

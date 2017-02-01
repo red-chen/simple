@@ -1,6 +1,6 @@
 // 主要是提供常用的宏定义
-#ifndef LEMON_ASSERT_H_
-#define LEMON_ASSERT_H_
+#ifndef SIMPLE_ASSERT_H_
+#define SIMPLE_ASSERT_H_
 
 #include "timestamp.h"
 

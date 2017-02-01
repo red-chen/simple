@@ -1,6 +1,6 @@
 //
-#ifndef LEMON_ARRAY_LIST_H_
-#define LEMON_ARRAY_LIST_H_
+#ifndef SIMPLE_ARRAY_LIST_H_
+#define SIMPLE_ARRAY_LIST_H_
 
 #include <stdbool.h>
 

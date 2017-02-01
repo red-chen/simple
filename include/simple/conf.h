@@ -3,8 +3,8 @@
  * Key2 = Value2
  */
 
-#ifndef LEMON_CONF_H_
-#define LEMON_CONF_H_
+#ifndef SIMPLE_CONF_H_
+#define SIMPLE_CONF_H_
 
 #include <stdbool.h>
 

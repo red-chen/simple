@@ -1,7 +1,7 @@
 // 异步储存数据
 
-#ifndef LEMON_ASYNC_FILE_H_
-#define LEMON_ASYNC_FILE_H_
+#ifndef SIMPLE_ASYNC_FILE_H_
+#define SIMPLE_ASYNC_FILE_H_
 
 typedef struct asyncfile_t AsyncFile;
 

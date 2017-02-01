@@ -1,8 +1,8 @@
 // 计数器
 // 此工具的主要作用是记录
 
-#ifndef LEMON_COUNTER_H_
-#define LEMON_COUNTER_H_
+#ifndef SIMPLE_COUNTER_H_
+#define SIMPLE_COUNTER_H_
 
 #include <stdint.h>
 

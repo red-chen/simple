@@ -7,8 +7,8 @@
  * @date 2016-04-07
  */
 
-#ifndef LEMON_IO_THREAD_H_
-#define LEMON_IO_THREAD_H_
+#ifndef SIMPLE_IO_THREAD_H_
+#define SIMPLE_IO_THREAD_H_
 
 #include "event_loop.h"
 
@@ -98,4 +98,4 @@ void simple_io_thread_del_time_event(
 	SimpleIOThread* self, 
 	int64_t timeEventId);
 
-#endif /* LEMON_IO_THREAD_H_ */
+#endif /* SIMPLE_IO_THREAD_H_ */

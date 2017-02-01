@@ -14,7 +14,7 @@ C语言开发的工具库，包括常用的字符串解析、数据结构、日�
 # 本地编译
 ```
 # 安装scons
-https://github.com/red-chen/simple_scons
+https://github.com/red-chen/scons-init
 
 # 编译代码
 > git clone https://github.com/red-chen/simple.git --recursive
@@ -29,17 +29,3 @@ https://github.com/red-chen/simple_scons
 - Json
 - 原子操作
 - 多线程封装
-
-###
-
-###
-                        _________________
-                       /  _____________  \
-                       \ (             ) /
-                        \ \   LEMON   / /
-                         \ \         / /
-                          \ \       / /
-                           \ \     / /
-                            \ \   / /
-                             \ '-' /
-                              '-.-'

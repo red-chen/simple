@@ -1,7 +1,7 @@
 // thread-safe FIFO-Queue
 
-#ifndef LEMON_BLOCKING_QUEUE_H_
-#define LEMON_BLOCKING_QUEUE_H_
+#ifndef SIMPLE_BLOCKING_QUEUE_H_
+#define SIMPLE_BLOCKING_QUEUE_H_
 
 typedef struct BlockingQueue BlockingQueue;
 

@@ -20,8 +20,8 @@
 // unittest_suite_run_by_name方法时，系统只保证运行第一个Suite，并不会运行之后的Suite。
 // ----------------------------------------------------------------------------
 
-#ifndef LEMON_UNITTEST_H_
-#define LEMON_UNITTEST_H_
+#ifndef SIMPLE_UNITTEST_H_
+#define SIMPLE_UNITTEST_H_
 
 #include <stdio.h>
 #include <stdlib.h>

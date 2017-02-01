@@ -5,8 +5,8 @@
  *      Author: duoln
  */
 
-#ifndef LEMON_STRING_TOOL_H_
-#define LEMON_STRING_TOOL_H_
+#ifndef SIMPLE_STRING_TOOL_H_
+#define SIMPLE_STRING_TOOL_H_
 
 #include "collection/array_list.h"
 

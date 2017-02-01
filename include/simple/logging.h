@@ -1,5 +1,5 @@
-#ifndef LEMON_LOGGING_H_
-#define LEMON_LOGGING_H_
+#ifndef SIMPLE_LOGGING_H_
+#define SIMPLE_LOGGING_H_
 
 #include <stdlib.h>
 #include <stdbool.h>
@@ -66,4 +66,4 @@ void __logger__(
         const char* file,
         const char* fmt, ...);
 
-#endif /* LEMON_LOGGING_H_ */
+#endif /* SIMPLE_LOGGING_H_ */

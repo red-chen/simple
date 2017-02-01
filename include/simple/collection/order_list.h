@@ -1,7 +1,7 @@
 // list内部是根据compare函数排好序的，主要是解决logging的mapping继承问题
 
-#ifndef LEMON_ORDER_LIST_H_
-#define LEMON_ORDER_LIST_H_
+#ifndef SIMPLE_ORDER_LIST_H_
+#define SIMPLE_ORDER_LIST_H_
 
 #include <stdbool.h>
 

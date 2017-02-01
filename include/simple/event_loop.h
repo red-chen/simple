@@ -30,8 +30,8 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef LEMON_EVENT_LOOP_H_
-#define LEMON_EVENT_LOOP_H_
+#ifndef SIMPLE_EVENT_LOOP_H_
+#define SIMPLE_EVENT_LOOP_H_
 
 #include <time.h>
 #include <stdint.h>
