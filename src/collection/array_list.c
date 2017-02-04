@@ -17,6 +17,7 @@ struct ArrayList{
 };
 
 ArrayList* arraylist_new(int size){
+    ASSERT(size > 0, "input size(%d) <= 0", size);
     ArrayList* self = malloc(sizeof(ArrayList));
     ASSERT_NOT_NULL(self);
 
@@ -40,8 +41,8 @@ void arraylist_free(ArrayList* self){
 }
 
 void arraylist_reset(ArrayList* self, int size) {
-    ASSERT(size > 0, "input size <= 0");
-    ASSERT(size > self->size, "input size <= size of array list.");
+    ASSERT(size > 0, "input size(%d) <= 0", size);
+    ASSERT(size > self->size, "input size(%d) <= size of array list(%d).", self->size, size);
     void* t = realloc(self->array, sizeof(void*) * size);
     ASSERT_NOT_NULL(t);
     self->array = t;
@@ -76,6 +77,7 @@ void* arraylist_remove(ArrayList* self, int index) {
 }
 
 int arraylist_size(ArrayList* self) {
+    ASSERT_NOT_NULL(self);
     return self->size;
 }
 
