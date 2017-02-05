@@ -27,7 +27,7 @@ void simple_now_iso8601(/*out*/char out[]);
 
 void simple_timestamp_to_iso8601(TIME_IN_MICRO ts,/*out*/char out[]);
 
-// ISO8601: 2015-11-29T13:12:25.494+08
+// ISO8601: 2015-11-29T13:12:25.494000+08
 TIME_IN_MICRO simple_parse_iso8601(const char* iso8601Time);
 
 // UTC: 2015-12-12T00:00:00.000
