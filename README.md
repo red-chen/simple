@@ -24,7 +24,7 @@ https://github.com/red-chen/scons-init
 ```
 
 # 功能集合
-- 时间转换
+- [时间转换] (https://github.com/red-chen/simple/blob/master/include/simple/timestamp.h)
 - 日志
 - Json
 - 原子操作
